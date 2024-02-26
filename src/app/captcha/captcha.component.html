@@ -1,0 +1,9 @@
+<p>captcha works!</p>
+<form [formGroup]="aFormGroup">
+    <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" [type]="'audio'" formControlName="recaptcha" [size]="'compact'" [theme]="'dark'"
+    >
+    </ngx-recaptcha2>
+</form>
+<button mat-fab extended (click)="onClick($event)">
+    Send
+</button>

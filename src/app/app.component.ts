@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SnotifireService } from 'ngx-snotifire';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pruebas-angular';
+  constructor(readonly snotifireService: SnotifireService) {
+  }
+
+  hacer() {
+    debugger;
+    this.snotifireService.success("Example body content");    
+  }
+
 }
